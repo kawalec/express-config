@@ -1,7 +1,20 @@
 html
     head
-        link(rel="stylesheet" href="./main.css")
+        link(rel="stylesheet" href="/css/main.css")
+        script(src="/js/app.js")
     body
         .wrapper
-            h1
-                | Hello world!
+            h1.box__heder
+                | Contact form
+            form.box__form(action="/send" method="POST")
+                .box__form-control
+                    label.box__label What's your name?
+                    input.box__input(placeholder="Name Surname" type="text" name="name")
+                .box__form-control
+                    label.box__label What's your phone number?
+                    input.box__input(placeholder="+48 xxx-xxx-xxx" type="text" name="phone")
+                .box__form-control
+                    label.box__label Leave a message.
+                    input.box__input(placeholder="Please leave a message..." type="text" name="message")
+                .box__actions
+                    button.btn.btn__primary Send form
