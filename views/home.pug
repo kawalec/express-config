@@ -18,3 +18,6 @@ html
                     input.box__input(placeholder="Please leave a message..." type="text" name="message")
                 .box__actions
                     button.btn.btn__primary Send form
+        .flash-message
+            if (formMessage.length)
+                h1  #{formMessage}
